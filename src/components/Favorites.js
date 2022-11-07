@@ -19,6 +19,10 @@ const StyledFavorites = styled.div`
         text-align: center;
     }
 
+    li a {
+        color: #000;
+    }
+
     li img {
         width: 100px;
         border-radius: 50%;
@@ -34,8 +38,10 @@ function Favorites({canais: channels}) {
                 {channels.map(channel => {
                     return (
                         <li>
-                            <img src={`https://github.com/${channel}.png`} alt={`foto do canal ${channel}`} />
-                            <p>@{channel}</p>
+                            <a href={`https://github.com/${channel}`}>
+                                <img src={`https://github.com/${channel}.png`} alt={`foto do canal ${channel}`} />
+                                <p>@{channel}</p>                            
+                            </a>
                         </li>
                     )
                 })}

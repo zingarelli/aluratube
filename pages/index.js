@@ -10,8 +10,7 @@ function HomePage() {
     const [videoFilter, setVideoFilter] = React.useState('');
     
     return (
-        <>
-            <CSSReset />
+        <>            
             <div>
                 {/* prop drilling: pass props from parent to children */}
                 <Menu videoFilter={videoFilter} setVideoFilter={setVideoFilter} />

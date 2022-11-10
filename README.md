@@ -88,3 +88,12 @@ In the image below, there is an `index.js` file inside `/Menu` directory. There'
 ![part of the file structure of AluraTube](https://user-images.githubusercontent.com/19349339/200562790-3bcf2d05-5c39-4876-afcf-b41984c06fb0.png)
 
 So, you can create an `index.js` file for every component, which will represent such component.
+
+# Day 3
+
+Create Providers to define global behaviors of the application.
+
+_app.js: NextJS file for global definitions (configurations) of the application
+
+Styled Components: <ThemeProvider /> to work with different global themes to your app. When used in the _app.js, it provides a `theme` property that can be used to instantiate values to your styled components.
+

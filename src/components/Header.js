@@ -4,6 +4,8 @@ import Banner from './Banner';
 
 // create a styled component, which represents a div
 const StyledHeader = styled.div`
+    background-color: ${({ theme }) => theme.backgroundLevel1};
+
     margin-top: 56px;
 
     .user-info {

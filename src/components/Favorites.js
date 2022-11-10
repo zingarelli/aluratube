@@ -37,7 +37,7 @@ function Favorites({canais: channels}) {
             <ul>
                 {channels.map(channel => {
                     return (
-                        <li>
+                        <li key={channel}>
                             <a href={`https://github.com/${channel}`}>
                                 <img src={`https://github.com/${channel}.png`} alt={`foto do canal ${channel}`} />
                                 <p>@{channel}</p>                            

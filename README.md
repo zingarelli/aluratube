@@ -78,3 +78,13 @@ In order to create a repo for this project, you can run the follwing command to 
 ✅ Create "AluraTube Favoritos" component;
 
 ✅ Add README.
+
+# Day 2
+
+When you create an `index.js` file in a folder, this will be the default file to be used when importing a component from that folder.
+
+In the image below, there is an `index.js` file inside `/Menu` directory. There's another `index.js` inside `/pages` directory, which is the home page of the application. When importing the Menu component to the home page (`import Menu from '../src/components/Menu';`), you don't need to add `index.js` in the path - it will be implicit that this is the file to import the component from.
+
+![part of the file structure of AluraTube](https://user-images.githubusercontent.com/19349339/200562790-3bcf2d05-5c39-4876-afcf-b41984c06fb0.png)
+
+So, you can create an `index.js` file for every component, which will represent such component.

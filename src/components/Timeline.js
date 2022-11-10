@@ -46,7 +46,7 @@ export const StyledTimeline = styled.div`
   }
 `;
 
-function Timeline(prop) {
+function Timeline({videoFilter, ...prop}) {
     // console.log(prop.playlists);
     const playlistsNames = Object.keys(prop.playlists);
     // we use map() because this function returns an array
@@ -55,20 +55,27 @@ function Timeline(prop) {
         <StyledTimeline>
             {playlistsNames.map((playlist) => {
                 const videos = prop.playlists[playlist];
-                // console.log(videos);
-
                 return (
-                    <section>
+                    <section key={playlist}>
                         <h2>{playlist}</h2>
                         <div>
-                            {videos.map((video) => {
+                            {videos
+                              // first get videos that matches any search value typed by the user
+                              .filter((video) => {
+                                const titleNormalized = video.title.toLowerCase();
+                                const videoFilterNormalized = videoFilter.toLowerCase();
+                                return titleNormalized.includes(videoFilterNormalized)
+                              })
+                              // then map those videos to display in the page
+                              .map((video) => {
                                 return (
-                                    <a href={video.url}>
+                                    <a key={video.url} href={video.url}>
                                         <img src={video.thumb} />
                                         <span>{video.title}</span>
                                     </a>
                                 )
-                            })}
+                              })
+                            }
                         </div>
                     </section>                    
                 );

@@ -1,3 +1,4 @@
+import React from 'react';
 import config from '../config.json';
 import { CSSReset } from '../src/components/CSSReset';
 import Favorites from '../src/components/Favorites';
@@ -6,13 +7,16 @@ import Menu from '../src/components/Menu';
 import Timeline from '../src/components/Timeline'
 
 function HomePage() {
+    const [videoFilter, setVideoFilter] = React.useState('');
+    
     return (
         <>
             <CSSReset />
             <div>
-                <Menu />
+                {/* prop drilling: pass props from parent to children */}
+                <Menu videoFilter={videoFilter} setVideoFilter={setVideoFilter} />
                 <Header />
-                <Timeline playlists={config.playlists} />
+                <Timeline videoFilter={videoFilter} playlists={config.playlists} />
                 <Favorites canais={config.favorites} />
             </div>
         </>

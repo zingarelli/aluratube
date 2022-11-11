@@ -106,3 +106,5 @@ Custom Hooks: create a function in which you can define behaviors that will be a
 Use Supabase as backend and database, to store and get data regarding the videos
 
 Create videoService.js that will handle requests to the backend. Data returned from this service should be handled by the component that called it.
+
+TODO: integrate Vercel and Supabase. Hide supabase API key in Vercel environment and change supabase connection in the code. For now, I've changed the key to avoid others from using the database.

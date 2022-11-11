@@ -24,7 +24,7 @@ function HomePage() {
             service.getAllVideos()
                 .then((result) => {
                     const newPlaylist = {...playlists};
-                    if(result) {
+                    if(result.status === 200) {
                         result.data.forEach((video) => {
                             if(!newPlaylist[video.playlist]) {
                                 // create a new playlist
@@ -32,6 +32,10 @@ function HomePage() {
                             }
                             newPlaylist[video.playlist].push(video);
                         })
+                    }
+                    else {
+                        console.log('Check if SupaBase is still active (they pause projects that are inactive for long times)');
+                        console.log(result);
                     }
                     // update playslists state
                     setPlaylists(newPlaylist);

@@ -69,7 +69,7 @@ function Timeline({videoFilter, ...prop}) {
                               // then map those videos to display in the page
                               .map((video) => {
                                 return (
-                                    <a key={video.url} href={video.url}>
+                                    <a key={video.id} href={video.url}>
                                         <img src={video.thumb} />
                                         <span>{video.title}</span>
                                     </a>

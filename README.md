@@ -11,7 +11,7 @@ An Youtube-like app to display video playlists and favorite AluraTube channels.
 ![](https://user-images.githubusercontent.com/19349339/200430497-06792a96-244a-4324-8055-a4445aa3889e.png#vitrinedev)
 
 ## Project Details
-Work in progress...
+Work in progress... For now, I'm just adding thoughts and concepts learned in the video tutorials.
 
 # Install and config
 You need Node (v16.15.1) and NPM (8.11.0) installed in your machine.
@@ -97,3 +97,12 @@ _app.js: NextJS file for global definitions (configurations) of the application
 
 Styled Components: <ThemeProvider /> to work with different global themes to your app. When used in the _app.js, it provides a `theme` property that can be used to instantiate values to your styled components.
 
+# Day 4
+
+Custom Hooks: create a function in which you can define behaviors that will be aplied when a component use "properties" of this custom hook
+
+# Day 5
+
+Use Supabase as backend and database, to store and get data regarding the videos
+
+Create videoService.js that will handle requests to the backend. Data returned from this service should be handled by the component that called it.

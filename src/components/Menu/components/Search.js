@@ -46,9 +46,9 @@ function Search({ videoFilter, setVideoFilter }) {
           <input 
             type="text" 
             onChange={(e) => {
-              console.log('Valor antes', searchValue);
-              searchValue = e.target.value;
-              console.log('Valor depois', searchValue);
+              // console.log('Valor antes', searchValue);
+              setSearchValue(e.target.value);
+              // console.log('Valor depois', searchValue);
             }}
             value={searchValue}
           />
